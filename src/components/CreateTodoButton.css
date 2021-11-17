@@ -1,0 +1,17 @@
+.nav-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav-footer button{
+    border: none;
+    padding: 1rem 1.7rem;
+    border-radius: 50%;
+    background-color:rgba(177,45,253,1);
+    color: #ffffff;
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

@@ -1,0 +1,19 @@
+.input-search{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input-search input{
+    width: 85%;
+    border: none;
+    padding: .7rem;
+}
+
+.input-search button{
+    border: none;
+    width: 15%;
+    padding: .7rem;
+}

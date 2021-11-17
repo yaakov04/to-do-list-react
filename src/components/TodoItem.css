@@ -1,0 +1,29 @@
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 0.1rem rgb(204, 204, 204);
+  padding: 0.5rem 0;
+}
+.list-item i {
+  font-size: 2.2rem;
+}
+.list-item:first-of-type {
+  border: none;
+}
+.list-item .check {
+  width: 20%;
+  text-align: center;
+}
+.check--completed {
+  color: rgb(37, 156, 37);
+}
+.list-item p {
+  width: 60%;
+}
+
+.list-item .delete {
+  text-align: center;
+  width: 20%;
+  color: rgb(221, 51, 51);
+}
