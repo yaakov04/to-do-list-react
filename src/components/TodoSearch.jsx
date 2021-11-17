@@ -1,13 +1,22 @@
 import React from "react";
 import "./TodoSearch.css";
 
-const TodoSearch = () => {
+const TodoSearch = ({searchValue, setSearchValue}) => {
+
+  const onValueChange = (e) => {
+    //console.log(e.target.value);
+    setSearchValue(e.target.value);
+  };
+
   return (
     <div className="input-search">
-      <form action="" method="get">
-        <input type="text" placeholder="Cebolla" />
-        <button>
-          <i class="fas fa-search"></i>
+      <form>
+        <input type="text" 
+        placeholder="Cebolla" 
+        value={searchValue}
+        onChange={onValueChange} />
+        <button type="button">
+          <i className="fas fa-search"></i>
         </button>
       </form>
     </div>

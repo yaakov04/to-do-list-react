@@ -2,9 +2,14 @@ import React from "react";
 import "./CreateTodoButton.css";
 
 const CreateTodoButton = () => {
+  const onButton = () => {
+    console.log('clic');
+  };
   return (
     <div className="nav-footer">
-      <button><i class="fas fa-plus"></i></button>
+      <button
+      onClick={onButton}
+      ><i className="fas fa-plus"></i></button>
     </div>
   );
 };
