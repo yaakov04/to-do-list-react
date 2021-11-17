@@ -6,3 +6,8 @@
   border-radius: .5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.list p{
+  width: 100%;
+  text-align: center;
+}

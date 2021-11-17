@@ -17,9 +17,7 @@
   cursor: pointer;
   transition: color .3s ease;
 }
-.list-item .check:hover {
-  color: rgb(37, 156, 37);
-}
+
 .check--completed {
   color: rgb(37, 156, 37);
 }

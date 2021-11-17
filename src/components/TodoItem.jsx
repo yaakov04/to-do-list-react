@@ -1,13 +1,8 @@
 import React from "react";
 import "./TodoItem.css";
 
-const TodoItem = ({ text, completed }) => {
-  const onComplete = () => {
-    console.log('clic');
-  };
-  const onDelete = () => {
-    console.log('clic de');
-  };
+const TodoItem = ({ text, completed, onComplete, onDelete }) => {
+  
   return (
     <li className="list-item">
       <i
