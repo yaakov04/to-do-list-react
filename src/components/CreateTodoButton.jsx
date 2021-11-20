@@ -1,9 +1,9 @@
 import React from "react";
 import "./CreateTodoButton.css";
 
-const CreateTodoButton = () => {
+const CreateTodoButton = ({setOpenModal}) => {
   const onButton = () => {
-    console.log('clic');
+    setOpenModal(prevState => !prevState);
   };
   return (
     <div className="nav-footer">

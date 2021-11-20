@@ -8,6 +8,8 @@ const TodoProvider = props => {
     const {item:todos, saveItems:saveTodos, loading, error} = useLocalStorge('TODOS_V1', []);
 
     const [searchValue, setSearchValue] = useState('');
+
+    const [openModla, setOpenModal] = useState(false);
     
   
     const completedTodos = todos.filter(todo => todo.completed===true).length;
@@ -41,6 +43,17 @@ const TodoProvider = props => {
       saveTodos(newTodos);
     };
 
+    const addTodo = text => {
+      const newTodos = [...todos];
+      const id = newTodos[newTodos.length - 1]?newTodos[newTodos.length - 1].id + 1:1;
+      newTodos.push({
+        id: id,
+        completed: false,
+        text: text
+      });
+      saveTodos(newTodos);
+    };
+
 
 
     return <TodoContext.Provider value={{
@@ -52,7 +65,10 @@ const TodoProvider = props => {
                 completedTodos,
                 totalTodos,
                 completeTodo,
-                deleteTodo
+                deleteTodo,
+                openModla,
+                setOpenModal,
+                addTodo
     }}>
                 {props.children}
 

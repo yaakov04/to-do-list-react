@@ -6,10 +6,12 @@ import TodoList from "./components/TodoList";
 import TodoItem from "./components/TodoItem";
 import CreateTodoButton from "./components/CreateTodoButton";
 import { TodoContext } from './TodoContext';
+import Modal from './components/Modal';
+import TodoForm from './components/TodoForm';
 
 
 const UI = () => {
-    const {loading, error, searchedTodos, completeTodo,deleteTodo} = useContext(TodoContext);
+    const {loading, error, searchedTodos, completeTodo,deleteTodo,openModla, setOpenModal} = useContext(TodoContext);
     return (
         <Fragment>
             <TodoCounter />
@@ -31,8 +33,12 @@ const UI = () => {
                 ))}
                 </TodoList>
             
+                {!!openModla&&(<Modal>
+                    <TodoForm />
+                </Modal>)}
 
-            <CreateTodoButton />
+            <CreateTodoButton
+            setOpenModal={setOpenModal} />
         </Fragment>
     );
 };
