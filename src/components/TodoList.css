@@ -6,6 +6,11 @@
   border-radius: .5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+@media(min-width:1024px) {
+  .list{
+    width: 72rem;
+  }
+}
 
 .list p{
   width: 100%;
